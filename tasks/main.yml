@@ -4,12 +4,6 @@
 - name: Fix needrestart
   ansible.builtin.include_tasks: needrestart.yml
 
-- name: Install ubuntu desktop
-  ansible.builtin.apt:
-    pkg:
-    # - gdm3
-    # - desktop-base
-    # - gnome-session
-    # - gnome-software
-    - ubuntu-desktop-minimal
-  become: true
+- name: Install Ubuntu Desktop minimal
+  ansible.builtin.include_tasks: install.yml
+  when: not debug
