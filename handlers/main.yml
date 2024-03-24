@@ -1,2 +1,4 @@
 ---
-# handlers file for Ubuntu-Desktop-minimal
+- name: Reboot machine
+  ansible.builtin.reboot:
+  become: true

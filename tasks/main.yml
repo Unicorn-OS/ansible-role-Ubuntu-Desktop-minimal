@@ -1,9 +1,6 @@
 ---
-# tasks file for Ubuntu-Desktop-minimal
-
-- name: Fix needrestart
+- name: Fix needrestart for non-interactive
   ansible.builtin.include_tasks: needrestart.yml
 
 - name: Install Ubuntu Desktop minimal
   ansible.builtin.include_tasks: install.yml
-  when: not debug

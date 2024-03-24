@@ -2,9 +2,7 @@
 - name: Install ubuntu desktop
   ansible.builtin.apt:
     pkg:
-    # - gdm3
-    # - desktop-base
-    # - gnome-session
-    # - gnome-software
-    - ubuntu-desktop-minimal
+      - ubuntu-desktop-minimal
+    update_cache: true
   become: true
+  notify: Reboot machine
